@@ -1,0 +1,48 @@
+/* splash.css */
+
+html {
+  height: 120vh;
+}
+
+body {
+  text-align: center;
+  height: 100%;
+  background: url("Assets/KoiPaint.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+}
+
+.info_space {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#icon_space {}
+
+#welcome_space {
+  color: white;
+  font-size: 50px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#enter_space {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+#enter {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 70px;
+}
+
+#credit_space {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}

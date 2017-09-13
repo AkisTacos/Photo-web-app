@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="weather.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Pacifico|Raleway:100,300,400,600" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <div class="center">
+    <div id="plus"><button id="mobSubmit" onclick="gotPlace()"><img src="../WeatherApp/plus.png"></button> </div>
+
+    <div id="form">
+      <input type="text" id="input2" placeholder="enter city/zip">
+      <button id="submit" onclick="gotPlace()">submit</button>
+    </div>
+
+    <div id="current">
+      <div id="today">Today</div>
+      <div>&nbsp&nbsp</div>
+      <div id="time">Time</div>
+    </div>
+
+    <div id="date">hi</div>
+
+    <div id="cImg"></div>
+    <div id="city">City</div>
+
+    <div class="info">
+      <img src="../WeatherApp/drop.png" width="20%" height="3%"> &nbsp
+      <div id="cPerc">Perc</div>
+      <br>
+      <img src="../WeatherApp/wind.png" width="20%" height="3%"> &nbsp
+      <div id="cWind">Wind</div>
+    </div>
+    <div id="cTemp">TEMP</div>
+
+
+  </div>
+
+  <div id="container">
+    <div class="window" id="window2">
+      <div id="w1">Weather1</div>
+      <div id="w2">Weather2</div>
+      <div id="w3">Weather3</div>
+      <div id="w4">Weather4</div>
+      <div id="w5">Weather5</div>
+      <div id="w6">Weather6</div>
+      <div id="w7">Weather7</div>
+      <div id="w8">Weather8</div>
+      <div id="w9">Weather9</div>
+      <div id="w10">Weather10</div>
+    </div>
+  </div>
+  <div class="arrows">
+
+    <button id="left" onclick="moveLeft()"><img src = "../WeatherApp/arrow-left.png">Previous Forecast</button>
+    <div>&nbsp</div>
+
+    <button id="right" onclick="moveRight()">Next Forecast<img src = "../WeatherApp/arrow-right.png"></button>
+  </div>
+
+  <footer>
+    <div id="logo">
+      <a href="https://www.yahoo.com/?ilc=401" target="_blank"> <img src="https://poweredby.yahoo.com/white.png" width="134" height="29" /> </a>
+    </div>
+  </footer>
+
+
+
+
+  <script src="weather.js"></script>
+  <script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='Davis')&format=json&callback=callbackFunction">
+  </script>
+
+</body>
+
+
+</html>

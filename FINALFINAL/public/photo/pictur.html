@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ECS 189h Photobooth</title>
+
+  <link rel="stylesheet" type="text/css" href="pictur.css">
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo_space">
+      <img id="logo" src="../Assets/logo.png">
+    </div>
+    <!-- End logo space -->
+    <!-- <img id="logo" src="../Assets/logo.png"> -->
+    <form id="search_space">
+      <input id="filter" type="text" name="search" value="filter" onfocus="if (this.value=='filter')this.value='';" onfocusout="if (this.value=='')this.value='filter'" />
+      <input id="filterBtn" type="submit" value="Submit">
+      <button id="clearBtn">Clear</button>
+    </form>
+
+    <div id="commands">
+
+      <button id="filterFave" onclick="filterFav()">favorites</button>
+
+
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn">upload</button>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <input type="file" id="fileSelector">
+          <button id="upload" href="#" onclick="uploadFile()">upload</button>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div id="fave">
+  </div>
+
+  <div id="pic_place_holder">
+    <div id="tempImg" style="display:none;">
+
+      <img id="img1">
+      <div id="pHolder">
+        <div id="ProgressBar"></div>
+      </div>
+    </div>
+
+    <div id="holdImg1" style="display:none;">
+      <div id="image1">
+
+
+      </div>
+      <div id="bottomHold1">
+
+        <form id="form1">
+
+          <input id="search1" type="search" name="addtag">
+          <input id="searchBtn1" type="submit" onclick="addTag(1)" value="Add Tag">
+          <img id="fav1" src="../Assets/fav0.png" onclick="addFav(1)">
+        </form>
+        <div id="tagSpace1"></div>
+      </div>
+    </div>
+
+    <div id="holdImg2" style="display:none;">
+      <div id="image2">
+
+
+      </div>
+      <div id="bottomHold2">
+
+        <form id="form2">
+
+          <input id="search2" type="search" name="addtag">
+          <input id="searchBtn2" type="submit" onclick="addTag(2)" value="Add Tag">
+          <img id="fav2" src="../Assets/fav0.png" onclick="addFav(2)">
+        </form>
+        <div id="tagSpace2"></div>
+      </div>
+    </div>
+    <div id="holdImg3" style="display:none;">
+      <div id="image3">
+
+
+      </div>
+      <div id="bottomHold3">
+
+        <form id="form3">
+
+          <input id="search3" type="search" name="addtag">
+          <input id="searchBtn3" type="submit" onclick="addTag(3)" value="Add Tag">
+          <img id="fav3" src="../Assets/fav0.png" onclick="addFav(3)">
+        </form>
+        <div id="tagSpace3"></div>
+      </div>
+    </div>
+
+    <div id="holdImg4" style="display:none;">
+      <div id="image4">
+
+
+      </div>
+      <div id="bottomHold4">
+
+        <form id="form4">
+
+          <input id="search4" type="search" name="addtag">
+          <input id="searchBtn4" type="submit" onclick="addTag(4)" value="Add Tag">
+          <img id="fav4" src="../Assets/fav0.png" onclick="addFav(4)">
+        </form>
+        <div id="tagSpace4"></div>
+      </div>
+    </div>
+
+    <div id="holdImg5" style="display:none;">
+      <div id="image5">
+
+
+      </div>
+      <div id="bottomHold5">
+
+        <form id="form5">
+
+          <input id="search5" type="search" name="addtag">
+          <input id="searchBtn5" type="submit" onclick="addTag(5)" value="Add Tag">
+          <img id="fav5" src="../Assets/fav0.png" onclick="addFav(5)">
+        </form>
+        <div id="tagSpace5"></div>
+      </div>
+    </div>
+
+    <div id="holdImg6" style="display:none;">
+
+      <div id="image6">
+
+
+      </div>
+      <div id="bottomHold6">
+
+        <form id="form6">
+
+          <input id="search6" type="search" name="addtag">
+          <input id="searchBtn6" type="submit" onclick="addTag(6)" value="Add Tag">
+          <img id="fav6" src="../Assets/fav0.png" onclick="addFav(6)">
+        </form>
+        <div id="tagSpace6"></div>
+      </div>
+    </div>
+
+    <div id="holdImg7" style="display:none;">
+      <div id="image7">
+
+
+      </div>
+      <div id="bottomHold7">
+
+        <form id="form7">
+
+          <input id="search7" type="search" name="addtag">
+          <input id="searchBtn7" type="submit" onclick="addTag(7)" value="Add Tag">
+          <img id="fav7" src="../Assets/fav0.png" onclick="addFav(7)">
+        </form>
+        <div id="tagSpace7"></div>
+      </div>
+    </div>
+
+
+    <div id="holdImg8" style="display:none;">
+      <div id="image8">
+
+
+      </div>
+      <div id="bottomHold8">
+
+        <form id="form8">
+
+          <input id="search8" type="search" name="addtag">
+          <input id="searchBtn8" type="submit" onclick="addTag(8)" value="Add Tag">
+          <img id="fav8" src="../Assets/fav0.png" onclick="addFav(8)">
+        </form>
+        <p id="tagSpace8"></p>
+      </div>
+    </div>
+
+    <div id="holdImg9" style="display:none;">
+      <div id="image9">
+
+
+      </div>
+      <div id="bottomHold9">
+
+        <form id="form9">
+
+          <input id="search9" type="search" name="addtag">
+          <input id="searchBtn9" type="submit" onclick="addTag(9)" value="Add Tag">
+          <img id="fav9" src="../Assets/fav0.png" onclick="addFav(9)">
+        </form>
+        <div id="tagSpace9"></div>
+      </div>
+    </div>
+    <div id="holdImg10" style="display:none;">
+      <div id="image10">
+
+
+      </div>
+      <div id="bottomHold10">
+
+        <form id="form10">
+
+          <input id="search10" type="search" name="addtag" onclick="addFav(10)">
+          <input id="searchBtn10" type="submit" onclick="addTag(10)" value="Add Tag">
+          <img id="fav9" src="../Assets/fav0.png" onclick="addFav(10)">
+        </form>
+        <div id="tagSpace10"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="photo.js"></script>
+
+</html>
